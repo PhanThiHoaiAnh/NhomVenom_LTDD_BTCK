@@ -13,7 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NhomVenom"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Register_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Login_Activity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
