@@ -25,7 +25,7 @@ public class Login_Activity extends AppCompatActivity {
     private FirebaseAuth mAuth_361;
     CheckBox cbNhoMK_361;
     SharedPreferences sharedPreferences_361;
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
