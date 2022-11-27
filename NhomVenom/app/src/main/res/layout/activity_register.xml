@@ -36,7 +36,7 @@
         android:layout_marginTop="30dp"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edt_Email_361"
         android:layout_width="345dp"
         android:layout_height="60dp"
         android:drawableStart="@drawable/ic_baseline_email_24"
@@ -47,7 +47,7 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/edt_Pass_361"
         android:layout_width="345dp"
         android:layout_height="60dp"
         android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
@@ -58,7 +58,7 @@
         android:layout_marginTop="10dp"/>
 
     <EditText
-        android:id="@+id/edtConFPassword"
+        android:id="@+id/edt_Pass_ConF_361"
         android:layout_width="345dp"
         android:layout_height="60dp"
         android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
@@ -69,7 +69,7 @@
         android:layout_marginTop="10dp"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_Signin_361"
         android:layout_width="200dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
@@ -94,7 +94,7 @@
             android:textSize="16dp" />
 
         <Button
-            android:id="@+id/signup_OfLIn"
+            android:id="@+id/signup_OfLIn_361"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"

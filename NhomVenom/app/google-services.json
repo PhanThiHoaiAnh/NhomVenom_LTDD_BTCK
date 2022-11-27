@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "398195133479",
+    "project_id": "nhomvenom",
+    "storage_bucket": "nhomvenom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398195133479:android:b05027e7f801a2e3a09202",
+        "android_client_info": {
+          "package_name": "com.example.bon.nhomvenom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398195133479-bh8rnughq94f9l8i8eaojnselscmfg8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtkqHvv4jbUyDR6CGuugWXavOxrGUyhk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398195133479-bh8rnughq94f9l8i8eaojnselscmfg8d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

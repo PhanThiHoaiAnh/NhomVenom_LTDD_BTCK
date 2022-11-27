@@ -42,7 +42,7 @@
         android:layout_marginTop="30dp"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edt_Email_lg_361"
         android:layout_width="345dp"
         android:layout_height="60dp"
         android:drawableStart="@drawable/ic_baseline_email_24"
@@ -53,7 +53,7 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/edt_Pass_lg_361"
         android:layout_width="345dp"
         android:layout_height="60dp"
         android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
@@ -72,7 +72,7 @@
         android:layout_marginTop="20dp">
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxNhoMK_361"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
@@ -94,7 +94,7 @@
     </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_Login_361"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -129,16 +129,16 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/btnDK_DN"
+            android:id="@+id/btnDK_DN_361"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:paddingLeft="20dp"
             android:text="đăng ký"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="14dp" />
+            android:textSize="14dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>
