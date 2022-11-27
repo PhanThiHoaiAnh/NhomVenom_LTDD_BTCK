@@ -40,7 +40,7 @@
         android:id="@+id/nav_manager_member"
         android:name="com.example.bon.nhomvenom.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_manager_member"
-        tools:layout="@layout/fragment_addmember" />
+        tools:layout="@layout/fragment_addbook" />
 
 
 </navigation>
