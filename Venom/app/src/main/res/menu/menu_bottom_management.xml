@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:title="@string/action_book"
+        android:icon="@drawable/book">
+    </item>
+    <item
+        android:id="@+id/action_favorite"
+        android:title="@string/action_category"
+        android:icon="@drawable/category">
+    </item>
+    <item
+        android:id="@+id/action_my_page"
+        android:title="@string/action_staff"
+        android:icon="@drawable/staff">
+    </item>
+</menu>

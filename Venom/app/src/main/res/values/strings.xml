@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Venom</string>
+    <string name="action_book">Sách</string>
+    <string name="action_category">Thể loại sách</string>
+    <string name="action_staff">Nhân viên</string>
+
+
+    <string name="action_home">Home</string>
+    <string name="action_favorite">Favorite</string>
+    <string name="action_my_page">My Page</string>
+</resources>
