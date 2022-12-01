@@ -6,9 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,9 +24,9 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login_Activity extends AppCompatActivity {
     private EditText edtemail_361, edtpass_361;
     private Button btnLogin_361;
-    private TextView tvReister_361;
+    private TextView tvReister_361, tvForgotPass_361;
     private FirebaseAuth mAuth_361;
-    CheckBox cbNhoMK_361;
+    CheckBox cbNhoMK_361, cbHienMK_361;
     SharedPreferences sharedPreferences_361;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,9 @@ public class Login_Activity extends AppCompatActivity {
         edtpass_361 = findViewById(R.id.edt_Pass_lg_361);
         btnLogin_361 = findViewById(R.id.button_Login_361);
         tvReister_361 = findViewById(R.id.btnDK_DN_361);
+        tvForgotPass_361 = findViewById(R.id.tv_forgotPass_361);
         cbNhoMK_361 = findViewById(R.id.checkBoxNhoMK_361);
+        cbHienMK_361 = findViewById(R.id.checkBoxHienMK_361);
 
         sharedPreferences_361 = getSharedPreferences("dataLogin", MODE_PRIVATE);
 
@@ -43,6 +48,16 @@ public class Login_Activity extends AppCompatActivity {
         edtpass_361.setText(sharedPreferences_361.getString("password",""));
         cbNhoMK_361.setChecked(sharedPreferences_361.getBoolean("checked", false));
 
+        cbHienMK_361.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    edtpass_361.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }else{
+                    edtpass_361.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
         btnLogin_361.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +68,13 @@ public class Login_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 register();
+            }
+        });
+        tvForgotPass_361.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login_Activity.this, Fogot_password_Activity.class);
+                startActivity(intent);
             }
         });
     }
