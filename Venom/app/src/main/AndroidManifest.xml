@@ -13,6 +13,27 @@
         android:theme="@style/Theme.Venom"
         tools:targetApi="31">
         <activity
+            android:name=".Forgot_Pass_Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Register_Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Login_Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Management"
             android:exported="false">
             <meta-data
@@ -34,13 +55,13 @@
         </activity>
         <activity
             android:name=".FavoriteFragment"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".HomeFragment"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MyPageFragment"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
