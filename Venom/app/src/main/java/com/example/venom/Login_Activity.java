@@ -61,7 +61,17 @@ public class Login_Activity extends AppCompatActivity {
         btnLogin_361.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login();
+                String username = "1";
+                String password = "1";
+                if(edtemail_361.getText().toString().equals(username) && edtpass_361.getText().toString().equals(password)){
+                    Toast.makeText(getApplicationContext(), "Login successfully",Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(Login_Activity.this, MemberActivity.class);
+                    startActivity(i);
+                }
+                else {
+                    login();
+                }
+
             }
         });
         tvReister_361.setOnClickListener(new View.OnClickListener() {
