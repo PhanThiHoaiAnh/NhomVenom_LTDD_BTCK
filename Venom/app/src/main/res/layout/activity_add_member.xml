@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity"
+    tools:context=".Add_Member"
     android:orientation="vertical"
     android:background="@drawable/gradientbackground">
 
@@ -76,10 +76,10 @@
                     android:id="@+id/txtImg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_cake_24"
+                    android:drawableLeft="@drawable/ic_baseline_image_24"
                     android:drawablePadding="20dp"
                     android:ems="25"
-                    android:hint="Năm sinh"
+                    android:hint="ImageUrl"
                     android:importantForAutofill="no"
                     android:textSize="15dp"
                     android:textStyle="italic" />

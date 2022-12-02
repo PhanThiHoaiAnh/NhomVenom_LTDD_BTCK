@@ -19,7 +19,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
+        <activity
+            android:name=".Add_Member"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Forgot_Pass_Activity"
             android:exported="false">
