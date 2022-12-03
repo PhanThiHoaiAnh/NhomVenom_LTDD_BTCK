@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add_Member"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@drawable/gradientbackground">
+    android:background="@drawable/gradientbackground"
+    tools:context=".staff.Add_Staff">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="QUẢN LÝ THÔNG TIN THÀNH VIÊN"
+        android:text="QUẢN LÝ THÔNG TIN NHÂN VIÊN"
         android:textSize="25dp"
         android:fontFamily="sans-serif-condensed-light"
         android:gravity="center"
         android:layout_marginTop="30dp"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp">
+        android:layout_height="436dp"
+        android:layout_gravity="center">
+
         <androidx.cardview.widget.CardView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            >
+            android:layout_marginTop="20dp">
+
             <LinearLayout
-                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -39,19 +41,19 @@
                     android:src="@drawable/img_thuvien" />
 
                 <EditText
-                    android:id="@+id/txtMatv"
+                    android:id="@+id/edt_idNV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_baseline_matv"
                     android:drawablePadding="20dp"
                     android:ems="25"
-                    android:hint="Mã thành viên"
+                    android:hint="Mã nhân viên"
                     android:importantForAutofill="no"
                     android:textSize="15dp"
                     android:textStyle="italic" />
 
                 <EditText
-                    android:id="@+id/txtName"
+                    android:id="@+id/edtNameNV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_baseline_people_24"
@@ -63,7 +65,19 @@
                     android:textStyle="italic" />
 
                 <EditText
-                    android:id="@+id/txtNamsinh"
+                    android:id="@+id/edt_Chucvu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_image_24"
+                    android:drawablePadding="20dp"
+                    android:ems="25"
+                    android:hint="Chức vụ"
+                    android:importantForAutofill="no"
+                    android:textSize="15dp"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/edtNamsinhNV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_baseline_cake_24"
@@ -73,40 +87,32 @@
                     android:importantForAutofill="no"
                     android:textSize="15dp"
                     android:textStyle="italic" />
-                <EditText
-                    android:id="@+id/txtImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_image_24"
-                    android:drawablePadding="20dp"
-                    android:ems="25"
-                    android:hint="ImageUrl"
-                    android:importantForAutofill="no"
-                    android:textSize="15dp"
-                    android:textStyle="italic" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button_addmember"
+                        android:id="@+id/btnAddNV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorAccent"
                         android:text="Thêm"
                         app:cornerRadius="10dp" />
 
                     <Button
-                        android:id="@+id/button_cancel"
+                        android:id="@+id/btnHuy_AddNV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
-                        android:text="Hủy"
+                        android:backgroundTint="@color/colorAccent"
+                        android:text="HỦY"
                         app:cornerRadius="10dp" />
+
                 </LinearLayout>
             </LinearLayout>
-
-
         </androidx.cardview.widget.CardView>
     </LinearLayout>
-
 </LinearLayout>
