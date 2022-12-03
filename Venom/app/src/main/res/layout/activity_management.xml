@@ -22,7 +22,7 @@
                 android:background="@color/colorPrimany"
                 android:paddingLeft="20dp"
                 android:paddingTop="20dp"
-                android:text="Thư viện"
+                android:text="Quản lý"
                 android:textColor="@color/white"
                 android:textSize="20sp">
             </TextView>
@@ -30,17 +30,19 @@
 
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/view_pager"
+            android:id="@+id/view_pager_mana"
             android:layout_width="match_parent"
             android:layout_height="610dp"
-            android:layout_above="@+id/bottom_nav"
+            android:layout_above="@+id/bottom_nav_mana"
             android:layout_marginBottom="0dp">
         </androidx.viewpager.widget.ViewPager>
+
+
     </LinearLayout>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
+        android:id="@+id/bottom_nav_mana"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

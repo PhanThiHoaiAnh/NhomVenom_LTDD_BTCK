@@ -1,8 +1,9 @@
 {
   "project_info": {
-    "project_number": "398195133479",
-    "project_id": "nhomvenom",
-    "storage_bucket": "nhomvenom.appspot.com"
+     "project_number": "1064949227629",
+    "firebase_url": "https://quanlythuvien-ee035-default-rtdb.firebaseio.com",
+    "project_id": "quanlythuvien-ee035",
+    "storage_bucket": "quanlythuvien-ee035.appspot.com"
   },
   "client": [
     {
@@ -20,7 +21,8 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBtkqHvv4jbUyDR6CGuugWXavOxrGUyhk8"
+          
+          "current_key": "AIzaSyDLiNWQoVqsjUPuqjiA_VNhMyLGLek4WEE"
         }
       ],
       "services": {
