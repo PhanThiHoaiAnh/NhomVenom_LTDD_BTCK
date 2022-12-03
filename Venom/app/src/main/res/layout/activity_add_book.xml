@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add_Member"
+    tools:context=".book.AddBook"
     android:orientation="vertical"
     android:background="@drawable/gradientbackground">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quản lý thông tin thành viên"
-        android:textStyle="bold"
-        android:textSize="30dp"
+        android:text="THÊM SÁCH"
+        android:textSize="25dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="30dp"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        >
+        android:layout_marginTop="30dp">
         <androidx.cardview.widget.CardView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -38,37 +39,49 @@
                     android:src="@drawable/img_thuvien" />
 
                 <EditText
-                    android:id="@+id/txtMatv"
+                    android:id="@+id/txtMasach"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_baseline_matv"
                     android:drawablePadding="20dp"
                     android:ems="25"
-                    android:hint="Mã thành viên"
+                    android:hint="Mã sách"
                     android:importantForAutofill="no"
                     android:textSize="15dp"
                     android:textStyle="italic" />
 
                 <EditText
-                    android:id="@+id/txtName"
+                    android:id="@+id/txtTensach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_book_24"
+                    android:drawablePadding="20dp"
+                    android:ems="25"
+                    android:hint="Tên sách"
+                    android:importantForAutofill="no"
+                    android:textSize="15dp"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/txtActor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_baseline_people_24"
                     android:drawablePadding="20dp"
                     android:ems="25"
-                    android:hint="Họ và tên"
+                    android:hint="Tên tác giả"
                     android:importantForAutofill="no"
                     android:textSize="15dp"
                     android:textStyle="italic" />
 
                 <EditText
-                    android:id="@+id/txtNamsinh"
+                    android:id="@+id/txtYear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_cake_24"
+                    android:drawableLeft="@drawable/ic_baseline_date_range_24"
                     android:drawablePadding="20dp"
                     android:ems="25"
-                    android:hint="Năm sinh"
+                    android:hint="Năm xuất bản"
                     android:importantForAutofill="no"
                     android:textSize="15dp"
                     android:textStyle="italic" />
@@ -86,17 +99,21 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
+
                     <Button
+                        android:id="@+id/button_addmember"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Thêm"
-                        android:id="@+id/button_addmember"/>
+                        app:cornerRadius="10dp" />
+
                     <Button
-                        android:layout_marginLeft="20dp"
+                        android:id="@+id/button_cancel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button_cancel"
-                        android:text="Hủy"/>
+                        android:layout_marginLeft="70dp"
+                        android:text="Hủy"
+                        app:cornerRadius="10dp" />
                 </LinearLayout>
             </LinearLayout>
 

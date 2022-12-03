@@ -1,4 +1,8 @@
-package com.example.venom.staff;
+package com.example.venom.book;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,35 +10,31 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.venom.Member;
 import com.example.venom.R;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Add_Staff extends AppCompatActivity {
-    private EditText edtMatv, edtTen, edtNamsinh,edtSurl;
+public class AddBook extends AppCompatActivity {
+    private EditText edtMaSach, edtTenSach, edtTenTG, edtNamXB ,edtSurl;
     private Button btnThem, btnThoat;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_member);
+        setContentView(R.layout.activity_add_book);
 
         initUi();
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String matv = edtMatv.getText().toString().trim();
-                String ten = edtTen.getText().toString().trim();
-                String namsinh = edtNamsinh.getText().toString().trim();
-                String surl = edtSurl.getText().toString().trim();
-                Member member =new Member(matv,ten,namsinh,surl);
-                onClickAddMember(member);
+                int IdBook = Integer.parseInt(edtMaSach.getText().toString().trim());
+                String nameBook = edtTenSach.getText().toString().trim();
+                String actor = edtTenTG.getText().toString().trim();
+                String year = edtNamXB.getText().toString().trim();
+                int img = Integer.parseInt(edtSurl.getText().toString().trim());
+                Book book =new Book(IdBook,nameBook,actor,year,img);
+                onClickAddMember(book);
             }
         });
         btnThoat.setOnClickListener(new View.OnClickListener() {
@@ -44,21 +44,23 @@ public class Add_Staff extends AppCompatActivity {
             }
         });
     }
+
     private  void initUi(){
-        edtMatv = findViewById(R.id.txtMatv);
-        edtTen = findViewById(R.id.txtName);
-        edtNamsinh = findViewById(R.id.txtNamsinh);
+        edtMaSach = findViewById(R.id.txtMasach);
+        edtTenSach = findViewById(R.id.txtTensach);
+        edtTenTG = findViewById(R.id.txtActor);
+        edtNamXB = findViewById(R.id.txtName);
         edtSurl = findViewById(R.id.txtImg);
         btnThem = findViewById(R.id.button_addmember);
         btnThoat = findViewById(R.id.button_cancel);
     }
-    private void onClickAddMember(Member member){
-        FirebaseDatabase  database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Member");
+    private void onClickAddMember(Book book){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Book");
 
-        String  pathObject = String.valueOf(member.getMatv());
+        String  pathObject = String.valueOf(book.getIdBook());
 
-        myRef.child(pathObject).setValue(member, new DatabaseReference.CompletionListener() {
+        myRef.child(pathObject).setValue(book, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
 

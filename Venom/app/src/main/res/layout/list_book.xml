@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_item_book"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgBook"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:src="@drawable/anhsach2"/>
+
+        <TextView
+            android:id="@+id/tv_masach"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgBook"
+            android:hint="Mã sách: "
+            android:paddingLeft="20dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_tensach"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_masach"
+            android:layout_toRightOf="@+id/imgBook"
+            android:hint="Tên sách:  "
+            android:fontFamily="sans-serif-condensed-light"
+            android:paddingLeft="20dp"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/tv_actor"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tensach"
+            android:layout_toRightOf="@+id/imgBook"
+            android:hint="Tác giả:"
+            android:fontFamily="sans-serif-condensed-light"
+            android:paddingLeft="20dp"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_actor"
+            android:layout_toRightOf="@+id/imgBook"
+            android:hint="Năm xuất bản:"
+            android:fontFamily="sans-serif-condensed-light"
+            android:paddingLeft="20dp"
+            android:textSize="20dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/delete_member"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/tv_actor"
+            android:paddingRight="10dp"
+            android:src="@drawable/img_delete" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tv_tensach"
+            android:paddingRight="10dp"
+            android:layout_toRightOf="@+id/tv_actor"
+            android:src="@drawable/img_pencil"
+            android:id="@+id/update_member"/>
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
