@@ -1,6 +1,6 @@
 {
   "project_info": {
-     "project_number": "1064949227629",
+    "project_number": "1064949227629",
     "firebase_url": "https://quanlythuvien-ee035-default-rtdb.firebaseio.com",
     "project_id": "quanlythuvien-ee035",
     "storage_bucket": "quanlythuvien-ee035.appspot.com"
@@ -8,20 +8,19 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:398195133479:android:b05027e7f801a2e3a09202",
+        "mobilesdk_app_id": "1:1064949227629:android:67e1d647ff028500d05f64",
         "android_client_info": {
-          "package_name": "com.example.bon.nhomvenom"
+          "package_name": "com.example.demovenom"
         }
       },
       "oauth_client": [
         {
-          "client_id": "398195133479-bh8rnughq94f9l8i8eaojnselscmfg8d.apps.googleusercontent.com",
+          "client_id": "1064949227629-7vgg1dd9rmc4j54n4hvg8c1fk5ep64cc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          
           "current_key": "AIzaSyDLiNWQoVqsjUPuqjiA_VNhMyLGLek4WEE"
         }
       ],
@@ -29,7 +28,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "398195133479-bh8rnughq94f9l8i8eaojnselscmfg8d.apps.googleusercontent.com",
+              "client_id": "1064949227629-7vgg1dd9rmc4j54n4hvg8c1fk5ep64cc.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -38,27 +37,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:398195133479:android:0cb25dc0071033b8a09202",
+        "mobilesdk_app_id": "1:1064949227629:android:b3aa23d3d6d7028ed05f64",
         "android_client_info": {
           "package_name": "com.example.venom"
         }
       },
       "oauth_client": [
         {
-          "client_id": "398195133479-bh8rnughq94f9l8i8eaojnselscmfg8d.apps.googleusercontent.com",
+          "client_id": "1064949227629-7vgg1dd9rmc4j54n4hvg8c1fk5ep64cc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBtkqHvv4jbUyDR6CGuugWXavOxrGUyhk8"
+          "current_key": "AIzaSyDLiNWQoVqsjUPuqjiA_VNhMyLGLek4WEE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "398195133479-bh8rnughq94f9l8i8eaojnselscmfg8d.apps.googleusercontent.com",
+              "client_id": "1064949227629-7vgg1dd9rmc4j54n4hvg8c1fk5ep64cc.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

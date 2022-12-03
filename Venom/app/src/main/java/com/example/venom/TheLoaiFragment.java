@@ -30,7 +30,7 @@ public class TheLoaiFragment extends Fragment {
         giaoduc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getContext(), Add_Member.class);
+                Intent i = new Intent(getContext(), SachGiaoDuc.class);
                 startActivity(i);
             }
         });
@@ -44,7 +44,7 @@ public class TheLoaiFragment extends Fragment {
         truyen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getContext(), TruyenTranh.class);
+                Intent i = new Intent(getContext(), TruyenTranhActivity.class);
                 startActivity(i);
             }
         });

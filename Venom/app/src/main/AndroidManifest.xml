@@ -13,6 +13,20 @@
         android:theme="@style/Theme.Venom"
         tools:targetApi="31">
         <activity
+            android:name=".TruyenTranhActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SachGiaoDuc"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="false">
             <meta-data
@@ -34,20 +48,12 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".TruyenTranh"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".TieuThuyet"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".Forgot_Pass_Activity"
             android:exported="false">

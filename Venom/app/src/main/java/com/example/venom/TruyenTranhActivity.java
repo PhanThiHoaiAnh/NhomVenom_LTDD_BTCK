@@ -1,10 +1,10 @@
 package com.example.venom;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -12,7 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class TieuThuyet extends AppCompatActivity {
+public class TruyenTranhActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     DatabaseReference databaseReference;
@@ -29,7 +29,7 @@ public class TieuThuyet extends AppCompatActivity {
 
         FirebaseRecyclerOptions<Sach> options =
                 new FirebaseRecyclerOptions.Builder<Sach>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("TieuThuyet"),Sach.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("TruyenTranh"),Sach.class)
                         .build();
         sachAdapter = new SachAdapter(options);
         recyclerView.setAdapter(sachAdapter);

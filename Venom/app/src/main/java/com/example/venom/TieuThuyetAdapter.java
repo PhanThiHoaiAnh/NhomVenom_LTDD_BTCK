@@ -27,19 +27,13 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class SachAdapter extends FirebaseRecyclerAdapter<Sach,SachAdapter.myViewHolder> {
-    /**
-     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
-     * {@link FirebaseRecyclerOptions} for configuration options.
-     *
-     * @param options
-     */
-    public SachAdapter(@NonNull FirebaseRecyclerOptions<Sach> options) {
+public class TieuThuyetAdapter extends FirebaseRecyclerAdapter<Sach,TieuThuyetAdapter.myViewHolder> {
+    public TieuThuyetAdapter(@NonNull FirebaseRecyclerOptions<Sach> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull Sach model) {
+    protected void onBindViewHolder(@NonNull TieuThuyetAdapter.myViewHolder holder, int position, @NonNull Sach model) {
         holder.matv.setText(model.getMasach());
         holder.ten.setText(model.getTen());
         holder.namsinh.setText(model.getNamsx());
@@ -113,6 +107,7 @@ public class SachAdapter extends FirebaseRecyclerAdapter<Sach,SachAdapter.myView
             }
         });
 
+
     }
 
     @NonNull
@@ -139,3 +134,4 @@ public class SachAdapter extends FirebaseRecyclerAdapter<Sach,SachAdapter.myView
         }
     }
 }
+

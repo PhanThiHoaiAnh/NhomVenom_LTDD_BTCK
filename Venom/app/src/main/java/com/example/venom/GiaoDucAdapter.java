@@ -2,6 +2,7 @@ package com.example.venom;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -18,28 +21,30 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class SachAdapter extends FirebaseRecyclerAdapter<Sach,SachAdapter.myViewHolder> {
+public class GiaoDucAdapter extends FirebaseRecyclerAdapter<Sach,GiaoDucAdapter.myViewHolder> {
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
      *
      * @param options
      */
-    public SachAdapter(@NonNull FirebaseRecyclerOptions<Sach> options) {
+    public GiaoDucAdapter(@NonNull FirebaseRecyclerOptions<Sach> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull Sach model) {
+    protected void onBindViewHolder(@NonNull GiaoDucAdapter.myViewHolder holder, int position, @NonNull Sach model) {
         holder.matv.setText(model.getMasach());
         holder.ten.setText(model.getTen());
         holder.namsinh.setText(model.getNamsx());
@@ -92,7 +97,7 @@ public class SachAdapter extends FirebaseRecyclerAdapter<Sach,SachAdapter.myView
                         map.put("namsinh",namsinh.getText().toString());
                         map.put("surl",surl.getText().toString());
 
-                        FirebaseDatabase.getInstance().getReference().child("SachVanHoc")
+                        FirebaseDatabase.getInstance().getReference().child("SachGiaoDuc")
                                 .child(getRef(position).getKey()).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
@@ -110,6 +115,30 @@ public class SachAdapter extends FirebaseRecyclerAdapter<Sach,SachAdapter.myView
                                 });
                     }
                 });
+            }
+        });
+        holder.imgDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(holder.matv.getContext());
+                builder.setTitle("Bạn muốn xóa ");
+                builder.setMessage("Không thể hoàn tác ");
+
+                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        FirebaseDatabase.getInstance().getReference().child("SachGiaoDuc")
+                                .child(getRef(position).getKey()).removeValue();
+
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder.show();
             }
         });
 
