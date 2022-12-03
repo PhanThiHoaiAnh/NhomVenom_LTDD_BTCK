@@ -20,7 +20,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Add_Member"
+            android:name=".member.Add_Member"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -41,7 +41,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MemberActivity"
+            android:name=".member.MemberActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -76,8 +76,6 @@
         <activity
             android:name=".MyPageFragment"
             android:exported="true" />
-
-
     </application>
 
 </manifest>

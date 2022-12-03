@@ -21,6 +21,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
                 return new FavoriteFragment();
             case 2:
                 return new MyPageFragment();
+            case 3:
+                return new HomeFragment();
             default:
                 return new HomeFragment();
         }

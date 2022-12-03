@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/background_intro">
         <ImageView
-            android:layout_width="110dp"
+            android:id="@+id/img_NV"
+            android:layout_width="100dp"
             android:layout_height="120dp"
             android:src="@drawable/staffs" />
 
@@ -56,16 +58,20 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_editNV"
+                android:id="@+id/btn_delNV"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                tools:ignore="DuplicateIds" />
+                android:backgroundTint="#00FFFFFF"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/ic_delete"/>
 
             <Button
                 android:id="@+id/btn_editNV"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                tools:ignore="DuplicateIds" />
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#00FFFFFF"
+                android:drawableLeft="@drawable/ic_edit"/>
 
         </LinearLayout>
 

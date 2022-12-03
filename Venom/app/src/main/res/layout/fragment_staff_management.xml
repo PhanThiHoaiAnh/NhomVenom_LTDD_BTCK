@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".member.MemberActivity"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="70dp"
-            android:background="@color/colorPrimany"
-            android:paddingLeft="10dp"
-            android:src="@drawable/ic_baseline_menu_24"></ImageView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="76dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimany">
+
+        <Button
+            android:layout_width="72dp"
+            android:layout_height="77dp"
+            android:backgroundTint="@color/colorPrimany"
+            app:cornerRadius="0dp"
+            android:drawableLeft="@drawable/ic_baseline_menu_24"/>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="342dp"
             android:layout_height="70dp"
             android:background="@color/colorPrimany"
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
-            android:text="QUẢN LÝ THÀNH VIÊN"
+            android:text="QUẢN LÝ NHÂN VIÊN"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMember"
+            android:id="@+id/rvStaff"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -60,5 +62,6 @@
 
 
     </RelativeLayout>
+    
 
 </LinearLayout>

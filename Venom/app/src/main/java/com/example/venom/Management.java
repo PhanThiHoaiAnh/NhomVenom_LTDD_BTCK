@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -13,15 +12,13 @@ public class Management extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private ViewPager viewPager;
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_management);
 
-        bottomNavigationView = findViewById(R.id.bottom_nav_mana);
-        viewPager = findViewById(R.id.view_pager_mana);
-
+        bottomNavigationView = findViewById(R.id.bottom_nav);
+        viewPager = findViewById(R.id.view_pager);
 
         setUpViewPager();
 
@@ -30,19 +27,21 @@ public class Management extends AppCompatActivity {
                 case R.id.action_book:
                     viewPager.setCurrentItem(0);
                     break;
-                case R.id.action_category:
+                case R.id.action_favorite:
                     viewPager.setCurrentItem(1);
                     break;
-                case R.id.action_staff:
+                case R.id.action_my_page:
                     viewPager.setCurrentItem(2);
+                    break;
+                case R.id.action_home:
+                    viewPager.setCurrentItem(3);
                     break;
             }
             return true;
         });
     }
-
     private void setUpViewPager() {
-        ViewPageAdapterMana viewPagerAdapter = new ViewPageAdapterMana(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(viewPagerAdapter);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -58,10 +57,13 @@ public class Management extends AppCompatActivity {
                         bottomNavigationView.getMenu().findItem(R.id.action_book).setChecked(true);
                         break;
                     case 1:
-                        bottomNavigationView.getMenu().findItem(R.id.action_category).setChecked(true);
+                        bottomNavigationView.getMenu().findItem(R.id.action_favorite).setChecked(true);
                         break;
                     case 2:
-                        bottomNavigationView.getMenu().findItem(R.id.action_staff).setChecked(true);
+                        bottomNavigationView.getMenu().findItem(R.id.action_my_page).setChecked(true);
+                        break;
+                    case 3:
+                        bottomNavigationView.getMenu().findItem(R.id.action_home).setChecked(true);
                         break;
                 }
             }
@@ -72,4 +74,5 @@ public class Management extends AppCompatActivity {
             }
         });
     }
+
 }

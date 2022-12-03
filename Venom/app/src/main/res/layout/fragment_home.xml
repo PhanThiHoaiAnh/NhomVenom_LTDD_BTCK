@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/background_intro"
     android:orientation="vertical">
 
     <LinearLayout
@@ -18,21 +17,18 @@
             android:layout_centerInParent="true"
             android:paddingLeft="15dp"
             android:text="L I B R A R Y"
-            android:textColor="@color/color_select_bottom_nav"
+            android:textColor="@color/library"
             android:textSize="30sp"
             android:textStyle="italic">
         </TextView>
 
-        <LinearLayout
-            android:layout_width="193dp"
-            android:layout_height="match_parent">
-        </LinearLayout>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_menu_24"
-            android:backgroundTint="@color/color_select_bottom_nav">
-        </ImageView>
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:drawableLeft="@drawable/ic_baseline_menu_24"
+            android:layout_marginLeft="150dp"/>
 
     </LinearLayout>
 
@@ -42,31 +38,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
-
+            android:background="@drawable/border_signup"
             app:iconifiedByDefault="false"
             app:queryBackground="@null"
             app:submitBackground="@null" />
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
+        android:id="@+id/viewPager_photo"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"/>
 
     <me.relex.circleindicator.CircleIndicator
         android:id="@+id/circle_indicator"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        tools:ignore="MissingClass" />
+        android:layout_marginTop="10dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:orientation="vertical">
 
         <TextView
@@ -83,6 +79,5 @@
             android:layout_marginTop="20dp">
         </ListView>
     </LinearLayout>
-
 
 </LinearLayout>
