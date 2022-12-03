@@ -47,6 +47,7 @@ public class Add_Member extends AppCompatActivity {
         edtTen = findViewById(R.id.txtName);
         edtNamsinh = findViewById(R.id.txtNamsinh);
         edtSurl = findViewById(R.id.txtImg);
+
         btnThem = findViewById(R.id.button_addmember);
         btnThoat = findViewById(R.id.button_cancel);
     }
