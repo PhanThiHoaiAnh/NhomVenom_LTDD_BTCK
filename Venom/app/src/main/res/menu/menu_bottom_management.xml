@@ -15,4 +15,9 @@
         android:title="@string/action_staff"
         android:icon="@drawable/staff">
     </item>
+    <item
+        android:id="@+id/action_thanhvien"
+        android:title="Thành viên"
+        android:icon="@drawable/mypage">
+    </item>
 </menu>

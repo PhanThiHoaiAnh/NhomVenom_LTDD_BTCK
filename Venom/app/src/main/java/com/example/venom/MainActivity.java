@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.action_my_page:
                     viewPager.setCurrentItem(2);
                     break;
+
             }
             return true;
         });
@@ -69,5 +70,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }

@@ -65,7 +65,7 @@ public class Login_Activity extends AppCompatActivity {
                 String password = "1";
                 if(edtemail_361.getText().toString().equals(username) && edtpass_361.getText().toString().equals(password)){
                     Toast.makeText(getApplicationContext(), "Login successfully",Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(Login_Activity.this, MemberActivity.class);
+                    Intent i = new Intent(Login_Activity.this, Management.class);
                     startActivity(i);
                 }
                 else {
