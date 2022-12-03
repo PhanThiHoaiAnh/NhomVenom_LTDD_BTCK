@@ -15,4 +15,5 @@
         android:title="@string/action_my_page"
         android:icon="@drawable/mypage">
     </item>
+
 </menu>

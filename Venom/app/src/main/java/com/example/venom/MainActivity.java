@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         bottomNavigationView = findViewById(R.id.bottom_nav);
         viewPager = findViewById(R.id.view_pager);
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.action_my_page:
                     viewPager.setCurrentItem(2);
                     break;
+
             }
             return true;
         });

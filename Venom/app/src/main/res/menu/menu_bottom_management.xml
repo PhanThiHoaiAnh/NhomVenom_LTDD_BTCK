@@ -6,13 +6,18 @@
         android:icon="@drawable/book">
     </item>
     <item
-        android:id="@+id/action_favorite"
+        android:id="@+id/action_theloai"
         android:title="@string/action_category"
         android:icon="@drawable/category">
     </item>
     <item
-        android:id="@+id/action_my_page"
+        android:id="@+id/action_nhanvien"
         android:title="@string/action_staff"
         android:icon="@drawable/staff">
+    </item>
+    <item
+        android:id="@+id/action_thanhvien"
+        android:title="Thành viên"
+        android:icon="@drawable/mypage">
     </item>
 </menu>
