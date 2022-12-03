@@ -70,12 +70,12 @@ public class PhieuMuonAdapter extends ArrayAdapter<PhieuMuon> {
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
-                        if (menuItem.getItemId()==R.id.item_add_phieunhap){
-                                Intent intent =new Intent(activity,Them_phieumuon.class);
-                                activity.startActivity(intent);
-                          //  Toast.makeText(getContext(),"Bạn đã chọn thêm phiếu mượn",Toast.LENGTH_SHORT).show();
-                        }
-                        else if (menuItem.getItemId()==R.id.item_edit_phieunhap){
+//                        if (menuItem.getItemId()==R.id.item_add_phieunhap){
+//                                Intent intent =new Intent(activity,Them_phieumuon.class);
+//                                activity.startActivity(intent);
+//                          //  Toast.makeText(getContext(),"Bạn đã chọn thêm phiếu mượn",Toast.LENGTH_SHORT).show();
+//                        }
+                         if (menuItem.getItemId()==R.id.item_edit_phieunhap){
                             Intent intent =new Intent(activity,SuaPhieuMuonActivity.class);
                             // Gửi phiếu mượn từ fđây qua màn hình cập nhập
                             // ở đây đối số 1: là khóa, dngf để nhận dạng gói rin, gửi qua bên màn hình sửa để lấy đúng chính xác siinh viên thì cần dùng khóa này
