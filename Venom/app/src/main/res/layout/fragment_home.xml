@@ -35,9 +35,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search"
@@ -46,26 +43,22 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/shapebgsearch"
+
             app:iconifiedByDefault="false"
             app:queryBackground="@null"
             app:submitBackground="@null" />
-    </LinearLayout>
 
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
 
-    <LinearLayout
-        android:layout_width="381dp"
-        android:layout_height="132dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="337dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/banner">
-
-        </ImageView>
-    </LinearLayout>
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/circle_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
