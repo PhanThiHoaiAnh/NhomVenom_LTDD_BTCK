@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
-                case R.id.action_book:
+                case R.id.action_home:
                     viewPager.setCurrentItem(0);
                     break;
                 case R.id.action_favorite:
@@ -34,9 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.action_my_page:
                     viewPager.setCurrentItem(2);
                     break;
-                case R.id.action_home:
-                    viewPager.setCurrentItem(3);
-                    break;
+
             }
             return true;
         });
@@ -55,16 +53,13 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 switch (position) {
                     case 0:
-                        bottomNavigationView.getMenu().findItem(R.id.action_book).setChecked(true);
+                        bottomNavigationView.getMenu().findItem(R.id.action_home).setChecked(true);
                         break;
                     case 1:
                         bottomNavigationView.getMenu().findItem(R.id.action_favorite).setChecked(true);
                         break;
                     case 2:
                         bottomNavigationView.getMenu().findItem(R.id.action_my_page).setChecked(true);
-                        break;
-                    case 3:
-                        bottomNavigationView.getMenu().findItem(R.id.action_home).setChecked(true);
                         break;
                 }
             }
@@ -75,5 +70,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }

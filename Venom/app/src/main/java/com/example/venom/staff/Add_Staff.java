@@ -52,6 +52,7 @@ public class Add_Staff extends AppCompatActivity {
         edtTenNV = findViewById(R.id.edtNameNV);
         edtChucVu = findViewById(R.id.edt_Chucvu);
         edtNamsinh = findViewById(R.id.edtNamsinhNV);
+        edtUrlAnh = findViewById(R.id.edt_urlAnh);
         btnThem = findViewById(R.id.btnAddNV);
         btnHuy = findViewById(R.id.btnHuy_AddNV);
     }

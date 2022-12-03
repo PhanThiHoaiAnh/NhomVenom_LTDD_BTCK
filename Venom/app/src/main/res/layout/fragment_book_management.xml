@@ -22,7 +22,7 @@
             android:background="@color/colorPrimany"
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
-            android:text="QUẢN LÝ SÁCH"
+            android:text="Quản lý sách"
             android:textColor="@color/white"
             android:textSize="20sp"/>
 

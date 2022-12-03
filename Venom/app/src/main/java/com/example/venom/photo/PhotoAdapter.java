@@ -17,7 +17,7 @@ import java.util.List;
 
 public class PhotoAdapter extends PagerAdapter {
 
-    private HomeFragment context;
+    private Context context;
     private List<Photo> listPhoto;
 
     public PhotoAdapter(HomeFragment context, List<Photo> listPhoto) {

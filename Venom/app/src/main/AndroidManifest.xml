@@ -20,12 +20,34 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".member.Add_Member"
+            android:name=".Add_Member"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".SachVanHoc"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TruyenTranh"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TieuThuyet"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <activity
             android:name=".Forgot_Pass_Activity"
             android:exported="false">
@@ -41,14 +63,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".member.MemberActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Login_Activity"
+            android:name=".MemberActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -56,6 +71,13 @@
         </activity>
         <activity
             android:name=".Management"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Login_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

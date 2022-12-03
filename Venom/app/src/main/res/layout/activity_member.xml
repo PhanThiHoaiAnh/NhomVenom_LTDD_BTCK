@@ -4,30 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".member.MemberActivity"
+    tools:context=".MemberActivity"
     android:orientation="vertical">
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="70dp"
-            android:background="@color/colorPrimany"
-            android:paddingLeft="10dp"
-            android:src="@drawable/ic_baseline_menu_24"></ImageView>
-
+        android:layout_height="55dp"
+        android:background="@color/purple_500">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@color/colorPrimany"
-            android:paddingLeft="20dp"
-            android:paddingTop="20dp"
-            android:text="QUẢN LÝ THÀNH VIÊN"
+            android:layout_height="match_parent"
+            android:text="Quản Lý Thành viên"
+            android:paddingTop="10dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="20sp" />
-
+            android:paddingLeft="10dp">
+        </TextView>
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -48,13 +40,12 @@
             android:layout_marginEnd="20dp"
             android:id="@+id/img_add"
             >
-
             <ImageView
                 android:id="@+id/img_addmember"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/gradient_member"
-                android:src="@drawable/ic_baseline_person_add_24" />
+                android:src="@drawable/ic_baseline_person_add_24"/>
 
         </androidx.cardview.widget.CardView>
 

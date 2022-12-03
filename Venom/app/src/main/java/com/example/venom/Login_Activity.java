@@ -16,7 +16,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.venom.member.MemberActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -66,7 +65,7 @@ public class Login_Activity extends AppCompatActivity {
                 String password = "1";
                 if(edtemail_361.getText().toString().equals(username) && edtpass_361.getText().toString().equals(password)){
                     Toast.makeText(getApplicationContext(), "Login successfully",Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(Login_Activity.this, MemberActivity.class);
+                    Intent i = new Intent(Login_Activity.this, Management.class);
                     startActivity(i);
                 }
                 else {
