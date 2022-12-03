@@ -1,5 +1,6 @@
 package com.example.venom.staff;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,55 +11,58 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.venom.Member;
 import com.example.venom.R;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Add_Staff extends AppCompatActivity {
-    private EditText edtMatv, edtTen, edtNamsinh,edtSurl;
-    private Button btnThem, btnThoat;
+    private EditText edtidNV, edtTenNV, edtChucVu, edtNamsinh, edtUrlAnh;
+    private Button btnThem, btnHuy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_member);
+        setContentView(R.layout.add_staff);
 
         initUi();
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String matv = edtMatv.getText().toString().trim();
-                String ten = edtTen.getText().toString().trim();
-                String namsinh = edtNamsinh.getText().toString().trim();
-                String surl = edtSurl.getText().toString().trim();
-                Member member =new Member(matv,ten,namsinh,surl);
-                onClickAddMember(member);
+                String maNV = edtidNV.getText().toString().trim();
+                String tenNV = edtTenNV.getText().toString().trim();
+                String chucVu = edtChucVu.getText().toString().trim();
+                String namSinhNV = edtNamsinh.getText().toString().trim();
+                String urlAnh = edtUrlAnh.getText().toString().trim();
+
+                Staff staff =new Staff(maNV,tenNV,chucVu,namSinhNV, urlAnh);
+                onClickAddStaff(staff);
             }
         });
-        btnThoat.setOnClickListener(new View.OnClickListener() {
+        btnHuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(Add_Staff.this, Staff_Management.class);
+                startActivity(intent);
             }
         });
     }
     private  void initUi(){
-        edtMatv = findViewById(R.id.txtMatv);
-        edtTen = findViewById(R.id.txtName);
-        edtNamsinh = findViewById(R.id.txtNamsinh);
-        edtSurl = findViewById(R.id.txtImg);
-        btnThem = findViewById(R.id.button_addmember);
-        btnThoat = findViewById(R.id.button_cancel);
+        edtidNV = findViewById(R.id.edt_idNV);
+        edtTenNV = findViewById(R.id.edtNameNV);
+        edtChucVu = findViewById(R.id.edt_Chucvu);
+        edtNamsinh = findViewById(R.id.edtNamsinhNV);
+        edtUrlAnh = findViewById(R.id.edt_urlAnh);
+        btnThem = findViewById(R.id.btnAddNV);
+        btnHuy = findViewById(R.id.btnHuy_AddNV);
     }
-    private void onClickAddMember(Member member){
+    private void onClickAddStaff(Staff staff){
         FirebaseDatabase  database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Member");
+        DatabaseReference myRef = database.getReference("Staff");
 
-        String  pathObject = String.valueOf(member.getMatv());
+        String  pathObject = String.valueOf(staff.getIdNV());
 
-        myRef.child(pathObject).setValue(member, new DatabaseReference.CompletionListener() {
+        myRef.child(pathObject).setValue(staff, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
 

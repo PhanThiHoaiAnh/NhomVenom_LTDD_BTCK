@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
+import com.example.venom.HomeFragment;
 import com.example.venom.R;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class PhotoAdapter extends PagerAdapter {
     private Context context;
     private List<Photo> listPhoto;
 
-    public PhotoAdapter(Context context, List<Photo> listPhoto) {
+    public PhotoAdapter(HomeFragment context, List<Photo> listPhoto) {
         this.context = context;
         this.listPhoto = listPhoto;
     }
