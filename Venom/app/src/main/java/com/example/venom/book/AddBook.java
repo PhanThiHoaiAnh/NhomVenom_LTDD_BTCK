@@ -34,7 +34,7 @@ public class AddBook extends AppCompatActivity {
                 String year = edtNamXB.getText().toString().trim();
                 int img = Integer.parseInt(edtSurl.getText().toString().trim());
                 Book book =new Book(IdBook,nameBook,actor,year,img);
-                onClickAddMember(book);
+                onClickAddBook(book);
             }
         });
         btnThoat.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +54,7 @@ public class AddBook extends AppCompatActivity {
         btnThem = findViewById(R.id.button_addmember);
         btnThoat = findViewById(R.id.button_cancel);
     }
-    private void onClickAddMember(Book book){
+    private void onClickAddBook(Book book){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Book");
 

@@ -71,7 +71,7 @@ public class BookAdapter extends FirebaseRecyclerAdapter<Book, BookAdapter.myVie
                 EditText namXB = v.findViewById(R.id.txtName);
                 EditText surl = v.findViewById(R.id.txtImg);
 
-                Button btnUpdate = v.findViewById(R.id.button_updatemember);
+                Button btnUpdate = v.findViewById(R.id.button_addBook);
                 Button btnCancel = v.findViewById(R.id.button_cancel);
                 maSach.setText(model.getIdBook());
                 tenSach.setText(model.getNameBook());
@@ -97,19 +97,19 @@ public class BookAdapter extends FirebaseRecyclerAdapter<Book, BookAdapter.myVie
                         map.put("year",namXB.getText().toString());
                         map.put("img",surl.getText().toString());
 
-                        FirebaseDatabase.getInstance().getReference().child("Member")
+                        FirebaseDatabase.getInstance().getReference().child("Book")
                                 .child(getRef(position).getKey()).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
-                                        Toast.makeText(holder.maSach.getContext(), "Update thanh cong ", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(holder.maSach.getContext(), "Update thành công ", Toast.LENGTH_SHORT).show();
                                         dialogPlus.dismiss();
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(holder.maSach.getContext(), "Update  that bai ", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(holder.maSach.getContext(), "Update  thất bại ", Toast.LENGTH_SHORT).show();
                                         dialogPlus.dismiss();
                                     }
                                 });
@@ -127,7 +127,7 @@ public class BookAdapter extends FirebaseRecyclerAdapter<Book, BookAdapter.myVie
                 builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Member")
+                        FirebaseDatabase.getInstance().getReference().child("Book")
                                 .child(getRef(position).getKey()).removeValue();
 
                     }
@@ -158,8 +158,8 @@ public class BookAdapter extends FirebaseRecyclerAdapter<Book, BookAdapter.myVie
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imgUpdate =  itemView.findViewById(R.id.update_member);
-            imgDelete = itemView.findViewById(R.id.delete_member);
+            imgUpdate =  itemView.findViewById(R.id.update_book);
+            imgDelete = itemView.findViewById(R.id.delete_book);
             imgBook = (CircleImageView) itemView.findViewById(R.id.imgBook);
             maSach = itemView.findViewById(R.id.tv_masach);
             tenSach = itemView.findViewById(R.id.tv_tensach);
