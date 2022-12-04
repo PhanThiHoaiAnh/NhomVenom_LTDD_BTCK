@@ -49,7 +49,7 @@ public class StaffAdapter extends FirebaseRecyclerAdapter<Staff, StaffAdapter.my
                 .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.imgAvatar);
 
-        holder.imgUpdate.setOnClickListener(new View.OnClickListener() {
+        holder.btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.imgAvatar.getContext())
@@ -110,7 +110,7 @@ public class StaffAdapter extends FirebaseRecyclerAdapter<Staff, StaffAdapter.my
                 });
             }
         });
-        holder.imgDelete.setOnClickListener(new View.OnClickListener() {
+        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.idNV.getContext());
@@ -145,7 +145,8 @@ public class StaffAdapter extends FirebaseRecyclerAdapter<Staff, StaffAdapter.my
     }
 
     class  myViewHolder extends RecyclerView.ViewHolder{
-        CircleImageView  imgAvatar,imgUpdate,imgDelete;
+        CircleImageView  imgAvatar;
+        Button btnUpdate,btnDelete;
         TextView idNV, tenNV, chucVu, namsinh;
 
         public myViewHolder(@NonNull View itemView) {
