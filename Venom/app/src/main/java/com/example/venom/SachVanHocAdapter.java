@@ -2,7 +2,6 @@ package com.example.venom;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.venom.staff.Add_Staff;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -29,20 +27,19 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class TieuThuyetAdapter extends FirebaseRecyclerAdapter<Sach,TieuThuyetAdapter.myViewHolder> {
-    private Management context;
+public class SachVanHocAdapter extends FirebaseRecyclerAdapter<Sach, SachVanHocAdapter.myViewHolder> {
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
      *
      * @param options
      */
-    public TieuThuyetAdapter(@NonNull FirebaseRecyclerOptions<Sach> options) {
+    public SachVanHocAdapter(@NonNull FirebaseRecyclerOptions<Sach> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull TieuThuyetAdapter.myViewHolder holder, int position, @NonNull Sach model) {
+    protected void onBindViewHolder(@NonNull SachVanHocAdapter.myViewHolder holder, int position, @NonNull Sach model) {
         holder.matv.setText(model.getMasach());
         holder.ten.setText(model.getTen());
         holder.namsinh.setText(model.getNamsx());
@@ -158,6 +155,7 @@ public class TieuThuyetAdapter extends FirebaseRecyclerAdapter<Sach,TieuThuyetAd
 
             imgUpdate =  itemView.findViewById(R.id.update_member);
             imgDelete = itemView.findViewById(R.id.delete_member);
+
             imgAvatar = (CircleImageView) itemView.findViewById(R.id.imgAvatar);
             matv = itemView.findViewById(R.id.tv_matv);
             ten = itemView.findViewById(R.id.tv_hoten);
@@ -165,6 +163,4 @@ public class TieuThuyetAdapter extends FirebaseRecyclerAdapter<Sach,TieuThuyetAd
             tacgia = itemView.findViewById(R.id.tv_tacgia);
         }
     }
-
-
 }

@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.venom.PhieuMuon.Them_phieumuon;
 import com.example.venom.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -24,6 +28,14 @@ public class TruyenTranh extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sach_van_hoc);
         getSupportActionBar().hide();
+        ImageView addSach = findViewById(R.id.img_addsach);
+        addSach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Them_phieumuon.class);
+                startActivity(intent);
+            }
+        });
 
         recyclerView = findViewById(R.id.rvSach);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

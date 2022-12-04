@@ -13,4 +13,5 @@
     <color name="colorPrimanyDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="color_select_bottom_nav">#D8A306</color>
+    <color name="library">#206823</color>
 </resources>

@@ -1,14 +1,14 @@
 package com.example.venom.staff;
 
 public class Staff {
-    private String idNV, tenNV, chucVu;
-    private int namSinh;
+    private String idNV, tenNV, chucVu, namSinh, urlAnh;
 
-    public Staff(String idNV, String tenNV, String chucVu, int namSinh) {
+    public Staff(String idNV, String tenNV, String chucVu, String namSinh, String urlAnh) {
         this.idNV = idNV;
         this.tenNV = tenNV;
         this.chucVu = chucVu;
         this.namSinh = namSinh;
+        this.urlAnh = urlAnh;
     }
 
     public String getIdNV() {
@@ -35,11 +35,19 @@ public class Staff {
         this.chucVu = chucVu;
     }
 
-    public int getNamSinh() {
+    public String getNamSinh() {
         return namSinh;
     }
 
-    public void setNamSinh(int namSinh) {
+    public void setNamSinh(String namSinh) {
         this.namSinh = namSinh;
+    }
+
+    public String getUrlAnh() {
+        return urlAnh;
+    }
+
+    public void setUrlAnh(String urlAnh) {
+        this.urlAnh = urlAnh;
     }
 }

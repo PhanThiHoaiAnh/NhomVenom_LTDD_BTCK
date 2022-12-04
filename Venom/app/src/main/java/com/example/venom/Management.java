@@ -28,15 +28,19 @@ public class Management extends AppCompatActivity {
                 case R.id.action_home:
                     viewPager.setCurrentItem(0);
                     break;
-                case R.id.action_theloai:
+                case R.id.active_theloai:
                     viewPager.setCurrentItem(1);
                     break;
-                case R.id.action_my_page:
+                case R.id.action_phieumuon:
                     viewPager.setCurrentItem(2);
                     break;
-                case R.id.action_thanhvien:
+                case R.id.action_nhanvien:
                     viewPager.setCurrentItem(3);
                     break;
+                case R.id.action_thanhvien:
+                    viewPager.setCurrentItem(4);
+                    break;
+
 
             }
             return true;
@@ -59,12 +63,15 @@ public class Management extends AppCompatActivity {
                         bottomNavigationView.getMenu().findItem(R.id.action_home).setChecked(true);
                         break;
                     case 1:
-                        bottomNavigationView.getMenu().findItem(R.id.action_theloai).setChecked(true);
+                        bottomNavigationView.getMenu().findItem(R.id.active_theloai).setChecked(true);
                         break;
                     case 2:
-                        bottomNavigationView.getMenu().findItem(R.id.action_my_page).setChecked(true);
+                        bottomNavigationView.getMenu().findItem(R.id.action_phieumuon).setChecked(true);
                         break;
                     case 3:
+                        bottomNavigationView.getMenu().findItem(R.id.action_nhanvien).setChecked(true);
+                        break;
+                    case 4:
                         bottomNavigationView.getMenu().findItem(R.id.action_thanhvien).setChecked(true);
                         break;
                 }

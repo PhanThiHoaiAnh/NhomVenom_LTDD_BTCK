@@ -5,13 +5,12 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@drawable/gradientbackground"
-    tools:context=".staff.Add_Staff">
+    android:background="@drawable/gradientbackground">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="THÊM NHÂN VIÊN"
+        android:text="SỬA THÔNG TIN"
         android:textSize="25dp"
         android:fontFamily="sans-serif-condensed-light"
         android:gravity="center"
@@ -29,7 +28,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="513dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="20dp">
@@ -112,16 +111,16 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/btnAddNV"
+                        android:id="@+id/btnEditNV"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="41dp"
                         android:backgroundTint="@color/colorAccent"
-                        android:text="Thêm"
+                        android:text="sửa"
                         app:cornerRadius="10dp"
                         tools:ignore="TouchTargetSizeCheck" />
 
                     <Button
-                        android:id="@+id/btnHuy_AddNV"
+                        android:id="@+id/btnHuy_EditNV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
