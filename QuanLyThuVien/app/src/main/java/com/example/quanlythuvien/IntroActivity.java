@@ -12,6 +12,7 @@ public class IntroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_intro);
         login =findViewById(R.id.btn_intro_login);
         signup=findViewById(R.id.btn_intro_signup);

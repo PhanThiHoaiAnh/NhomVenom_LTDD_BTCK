@@ -34,7 +34,8 @@
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:backgroundTint="@null"/>
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -123,6 +124,7 @@
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/trong_bgr"
                     android:text="ResetPass"
+                    app:backgroundTint="@null"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -158,8 +160,8 @@
                     style="@android:style/Widget.Button"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
-
                     android:background="@drawable/social_btn_bgr"
+                    app:backgroundTint="@null"
                     />
                 <Button
                     android:id="@+id/btn_google"
@@ -175,11 +177,12 @@
                     android:layout_marginEnd="16dp"
                     style="@android:style/Widget.Button"
                     android:drawablePadding="16dp"
+                    app:backgroundTint="@null"
                     android:background="@drawable/social_btn_bgr"
                     />
             </LinearLayout>
 
-            <Button
+            <TextView
                 android:id="@+id/btn_register"
                 style="@android:style/Widget.Button"
                 android:layout_width="match_parent"
@@ -188,7 +191,8 @@
                 android:text="Are you new user?Register"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                tools:ignore="TouchTargetSizeCheck" />
+                tools:ignore="TouchTargetSizeCheck"
+                />
         </LinearLayout>
 
     </ScrollView>
