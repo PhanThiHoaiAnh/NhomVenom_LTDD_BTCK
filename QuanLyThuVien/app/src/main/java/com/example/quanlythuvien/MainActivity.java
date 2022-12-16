@@ -11,6 +11,7 @@ import com.example.quanlythuvien.databinding.ActivityMainBinding;
 import com.example.quanlythuvien.member.MemberFragment;
 import com.example.quanlythuvien.phieumuon.PhieuMuonFragment;
 import com.example.quanlythuvien.view.NhanVienFragment;
+import com.example.quanlythuvien.view.Profile;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -34,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.action_phieumuon:
                     replaceFragment(new PhieuMuonFragment());
                     break;
-                case R.id.action_nhanvien:
-                    replaceFragment(new NhanVienFragment());
-                    break;
                 case R.id.action_thanhvien:
                     replaceFragment(new MemberFragment());
                     break;
+                case R.id.action_profile:
+                    replaceFragment(new Profile());
+                    break;
+
 
             }
             return true;

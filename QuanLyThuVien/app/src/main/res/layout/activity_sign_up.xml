@@ -106,6 +106,37 @@
                 android:inputType="textPassword"
                 android:padding="8dp"
                 android:textColorHint="@color/white" />
+            <EditText
+                android:id="@+id/edt_age"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edittext_bgr"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Age"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColorHint="@color/white" />
+            <EditText
+                android:id="@+id/edt_chucvu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edittext_bgr"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Chức vụ"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColorHint="@color/white" />
+
 
             <CheckBox
                 android:id="@+id/cb_SU_showpassword"

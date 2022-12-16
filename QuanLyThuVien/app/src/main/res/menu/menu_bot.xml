@@ -16,13 +16,13 @@
         android:icon="@drawable/staffs">
     </item>
     <item
-        android:id="@+id/action_nhanvien"
-        android:title="Nhân viên"
-        android:icon="@drawable/staff">
-    </item>
-    <item
         android:id="@+id/action_thanhvien"
         android:title="Thành viên"
+        android:icon="@drawable/staffs">
+    </item>
+    <item
+        android:id="@+id/action_profile"
+        android:title="Profile"
         android:icon="@drawable/staffs">
     </item>
 </menu>
