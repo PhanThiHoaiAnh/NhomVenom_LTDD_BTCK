@@ -1,7 +1,9 @@
 package com.example.quanlythuvien;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
@@ -13,34 +15,26 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.quanlythuvien.databinding.ActivityLoginBinding;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 public class LoginActivity extends AppCompatActivity {
-    private Button back;
-    private EditText password;
-    private CheckBox showpass;
-    private ImageButton login;
-    private TextView register;
+    ActivityLoginBinding binding;
+    FirebaseAuth firebaseAuth;
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+        binding=ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        register=findViewById(R.id.btn_register);
-        password=findViewById(R.id.edt_Lg_Password);
-        showpass=findViewById(R.id.cb_LG_showpassword);
-        back=findViewById(R.id.btn_LG_back);
-        login=findViewById(R.id.btn_login);
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i =new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(i);
-            }
-        });
+        firebaseAuth=FirebaseAuth.getInstance();
+        progressDialog=new ProgressDialog(this);
         //chuyển qua form đang ký
-        register.setOnClickListener(new View.OnClickListener() {
+        binding.btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i =new Intent(LoginActivity.this,SignUpActivity.class);
@@ -48,22 +42,72 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
         //hiển thị mật khẩu
-        showpass.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        binding.cbLGShowpassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b){
-                    password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    binding.edtLgPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                 }else {
-                    password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    binding.edtLgPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 }
             }
         });
         //thoát
-        back.setOnClickListener(new View.OnClickListener() {
+        binding.btnLGBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(LoginActivity.this,IntroActivity.class);
                 startActivity(intent);
+            }
+        });
+        //dăng nhập
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = binding.edtLgEmail.getText().toString().trim();
+                String password = binding.edtLgPassword.getText().toString().trim();
+                progressDialog.show();
+                firebaseAuth.signInWithEmailAndPassword(email,password)
+                        .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                            @Override
+                            public void onSuccess(AuthResult authResult) {
+                                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                                progressDialog.cancel();
+                                Toast.makeText(LoginActivity.this,"Login Success",Toast.LENGTH_SHORT).show();
+
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                progressDialog.cancel();
+                                Toast.makeText(LoginActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            }
+        });
+
+        binding.btnResetpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email=binding.edtLgEmail.getText().toString();
+                progressDialog.setTitle("Sending mail");
+                progressDialog.show();
+                firebaseAuth.sendPasswordResetEmail(email)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                progressDialog.cancel();
+                                Toast.makeText(LoginActivity.this,"Email sent",Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                progressDialog.cancel();
+                                Toast.makeText(LoginActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
             }
         });
     }
