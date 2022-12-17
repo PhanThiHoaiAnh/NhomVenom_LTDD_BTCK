@@ -58,7 +58,7 @@ public class TruyenTranhAdapter extends FirebaseRecyclerAdapter<Sach,TruyenTranh
             public void onClick(View view) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.imgAvatar.getContext())
                         .setContentHolder(new ViewHolder(R.layout.activity_update_sach))
-                        .setExpanded(true,1350)
+                        .setExpanded(true,1800)
                         .create();
 
                 View v = dialogPlus.getHolderView();
@@ -88,9 +88,10 @@ public class TruyenTranhAdapter extends FirebaseRecyclerAdapter<Sach,TruyenTranh
                     @Override
                     public void onClick(View view) {
                         Map<String,Object> map = new HashMap<>();
-                        map.put("matv",matv.getText().toString());
+                        map.put("masach",matv.getText().toString());
                         map.put("ten",ten.getText().toString());
-                        map.put("namsinh",namsinh.getText().toString());
+                        map.put("namsx",namsinh.getText().toString());
+                        map.put("tacgia",tacgia.getText().toString());
                         map.put("surl",surl.getText().toString());
 
                         FirebaseDatabase.getInstance().getReference().child("TruyenTranh")
