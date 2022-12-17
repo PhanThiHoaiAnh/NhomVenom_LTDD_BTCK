@@ -28,14 +28,14 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="50dp"
-                    android:src="@drawable/img" />
+                    android:src="@drawable/img_logo" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:text="Các phép tính"
+                    android:text="Các Thể Loại"
                     android:textColor="@color/white"
                     android:textSize="35dp"
                     android:textStyle="bold" />

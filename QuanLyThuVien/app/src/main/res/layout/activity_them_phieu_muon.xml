@@ -65,7 +65,8 @@
                     android:text="Submit"
                     android:layout_marginTop="16dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    app:backgroundTint="@null"/>
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -74,7 +75,8 @@
                     android:text="Back"
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"/>
+                    android:layout_marginLeft="5dp"
+                    app:backgroundTint="@null"/>
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -83,7 +85,8 @@
                     android:text="Cancel"
                     android:layout_marginTop="16dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    app:backgroundTint="@null"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

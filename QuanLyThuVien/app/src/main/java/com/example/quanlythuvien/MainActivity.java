@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.quanlythuvien.databinding.ActivityMainBinding;
 import com.example.quanlythuvien.member.MemberFragment;
 import com.example.quanlythuvien.phieumuon.PhieuMuonFragment;
-import com.example.quanlythuvien.view.NhanVienFragment;
+import com.example.quanlythuvien.view.HomeFragment;
 import com.example.quanlythuvien.view.Profile;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new NhanVienFragment());
+        replaceFragment(new HomeFragment());
 
         binding.bottomNav.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.action_home:
-                    replaceFragment(new NhanVienFragment());
+                    replaceFragment(new HomeFragment());
                     break;
                 case R.id.active_theloai:
                     replaceFragment(new TheLoaiFragment());
@@ -53,4 +53,4 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame_layout,fragment);
         fragmentTransaction.commit();
     }
-    }
+}
